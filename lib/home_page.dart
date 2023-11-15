@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -10,22 +12,19 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    Color myColor = Color(0xFF8FE1D7);
+
     return Scaffold(
-      backgroundColor: Color(0xFFF0F4F3), // Set the background color here
+      backgroundColor: const Color(0xFFF0F4F3), // Set the background color here
       body: Stack(
         children: <Widget>[
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.red,
-          ),
           Positioned(
-            top: 20,
-            left: 20,
+            left: -100,
             child: Container(
-              width: 60,
-              height: 60,
-              color: Colors.green,
+              width: 200,
+              height: 200,
+              decoration: BoxDecoration(
+                  color: myColor, borderRadius: BorderRadius.circular(100.0)),
             ),
           ),
         ],
