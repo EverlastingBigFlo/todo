@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
     Color myColor = Color(0xFF8FE1D7);
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF0F4F3), // Set the background color here
+      backgroundColor: const Color(0xFFF0F4F3),
       body: Stack(
         children: <Widget>[
           Positioned(
@@ -49,6 +49,28 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.black.withOpacity(0.1),
                     blurRadius: 20,
                   ),
+                ],
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: 430,
+            left: 75,
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Stack(
+                    children: [
+                      Image.asset(
+                        'lib/assets/undraw_done_checking_re_6vyx 1.png',
+                        height: 194,
+                        width: 254,
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 30),
+                  Text('Gets things with TODs'),
                 ],
               ),
             ),
