@@ -24,7 +24,33 @@ class _HomePageState extends State<HomePage> {
               width: 200,
               height: 200,
               decoration: BoxDecoration(
-                  color: myColor, borderRadius: BorderRadius.circular(100.0)),
+                color: myColor.withOpacity(0.7),
+                borderRadius: BorderRadius.circular(100.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.1),
+                    spreadRadius: 5,
+                    blurRadius: 20,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Positioned(
+            top: -80,
+            child: Container(
+              width: 200,
+              height: 200,
+              decoration: BoxDecoration(
+                color: myColor.withOpacity(0.7),
+                borderRadius: BorderRadius.circular(100.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.1),
+                    blurRadius: 20,
+                  ),
+                ],
+              ),
             ),
           ),
         ],
