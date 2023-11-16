@@ -89,15 +89,25 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 50),
+                SizedBox(height: 150),
                 SizedBox(
                   width: 380,
-                  height: 60, // Adjust the width as needed
+                  height: 60, // Adjust the height as needed
                   child: ElevatedButton(
                     onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFF50C2C9),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                    ),
                     child: Text(
                       'Get Started',
-                      style: GoogleFonts.poppins(),
+                      style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500)),
                     ),
                   ),
                 ),
