@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
+import 'package:todo/components/my_text.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -69,53 +70,41 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                   SizedBox(height: 50),
-                  Text(
-                    'Gets things with TODs',
-                    style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
+                  MyText(
+                      text: 'Gets things with TODs',
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
                   SizedBox(height: 15),
                   SizedBox(
-                    width: 200,
-                    child: Text(
-                      'Lorem ipsum dolor sit amet consectetur. Eget sit nec et euismod. Consequat urna quam felis interdum quisque. Malesuada adipiscing tristique ut eget sed.',
-                      style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.normal,
-                        ),
-                      ),
-                    ),
-                  ),
+                      width: 200,
+                      child: MyText(
+                        color: Colors.black,
+                        fontSize: 13,
+                        fontWeight: FontWeight.normal,
+                        text:
+                            'Lorem ipsum dolor sit amet consectetur. Eget sit nec et euismod. Consequat urna quam felis interdum quisque. Malesuada adipiscing tristique ut eget sed.',
+                      )),
                   SizedBox(height: 120),
                   SizedBox(
                     width: 380,
                     height: 60, // Adjust the height as needed
                     child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, 'registration');
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFF50C2C9),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                      ),
-                      child: Text(
-                        'Get Started',
-                        style: GoogleFonts.poppins(
-                          textStyle: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'registration');
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xFF50C2C9),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
                           ),
                         ),
-                      ),
-                    ),
+                        child: MyText(
+                          text: 'Get Started',
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
+                          fontSize: 18,
+                        )),
                   ),
                 ],
               ),
