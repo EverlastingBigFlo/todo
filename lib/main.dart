@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePage(),
-        'registration': (context) => const Registration(),
+        'register': (context) => const Registration(),
         'SignIn': (context) => const SignIn(),
       },
       theme: ThemeData(

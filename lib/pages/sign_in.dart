@@ -53,59 +53,134 @@ class _SignInState extends State<SignIn> {
               ),
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(top: 180),
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Stack(
-                    children: [
-                      Image.asset(
-                        'lib/assets/undraw_back_to_school_inwc 1.png',
-                        height: 194,
-                        width: 254,
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 50),
-                  MyText(
-                      text: 'Gets things with TODs',
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                  SizedBox(height: 15),
-                  SizedBox(
-                      width: 200,
-                      child: MyText(
-                        color: Colors.black,
-                        fontSize: 13,
-                        fontWeight: FontWeight.normal,
-                        text:
-                            'Lorem ipsum dolor sit amet consectetur. Eget sit nec et euismod. Consequat urna quam felis interdum quisque. Malesuada adipiscing tristique ut eget sed.',
-                      )),
-                  SizedBox(height: 120),
-                  SizedBox(
-                    width: 380,
-                    height: 60, // Adjust the height as needed
-                    child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, 'registration');
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF50C2C9),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0),
+          SingleChildScrollView(
+            child: Container(
+              margin: EdgeInsets.only(top: 260),
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MyText(
+                        text: 'Welcome back',
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    SizedBox(height: 50),
+
+                    Stack(
+                      children: [
+                        Image.asset(
+                          'lib/assets/undraw_back_to_school_inwc 1.png',
+                          height: 138,
+                          width: 184.44,
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 50),
+
+                    // email textfield starts here
+                    Container(
+                      height: 80, // Adjust the height as needed
+                      padding: const EdgeInsets.fromLTRB(30, 0, 30, 30),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        ),
+                        child: TextField(
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: InputDecoration(
+                            hintText: 'Enter your Email',
+                            hintStyle:
+                                TextStyle(color: Colors.black54, fontSize: 13),
+                            contentPadding: EdgeInsets.fromLTRB(25, 10, 25, 10),
+                            border: InputBorder.none,
                           ),
                         ),
-                        child: MyText(
-                          text: 'Get Started',
-                          fontWeight: FontWeight.w500,
+                      ),
+                    ),
+
+                    // email textfield end here
+
+                    // password textfield starts here
+                    Container(
+                      height: 80, // Adjust the height as needed
+                      padding: const EdgeInsets.fromLTRB(30, 0, 30, 30),
+                      child: Container(
+                        decoration: BoxDecoration(
                           color: Colors.white,
-                          fontSize: 18,
-                        )),
-                  ),
-                ],
+                          borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        ),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Enter Password',
+                            hintStyle:
+                                TextStyle(color: Colors.black54, fontSize: 13),
+                            contentPadding: EdgeInsets.fromLTRB(25, 10, 25, 10),
+                            border: InputBorder.none,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+
+                    //forget password widget
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '');
+                      },
+                      child: MyText(
+                          text: 'Forget password ?',
+                          fontSize: 16,
+                          fontWeight: FontWeight.normal,
+                          color: Color(0xFF50C2C9)),
+                    ),
+                    // password textfield end here
+                    SizedBox(height: 40),
+                    SizedBox(
+                      width: 380,
+                      height: 60, // Adjust the height as needed
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '');
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color(0xFF50C2C9),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                          ),
+                          child: MyText(
+                            text: 'Login',
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                            fontSize: 18,
+                          )),
+                    ),
+                    SizedBox(height: 40),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        MyText(
+                            text: 'Don’t have an account ? ',
+                            fontSize: 16,
+                            fontWeight: FontWeight.normal,
+                            color: Colors.black),
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, 'register');
+                          },
+                          child: MyText(
+                              text: 'Sign Up',
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: Color(0xFF50C2C9)),
+                        )
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
           ),

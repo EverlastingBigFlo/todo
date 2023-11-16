@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                     height: 60, // Adjust the height as needed
                     child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, 'registration');
+                          Navigator.pushNamed(context, 'register');
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFF50C2C9),
