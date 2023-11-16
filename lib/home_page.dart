@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_constructors
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:flutter/material.dart';
 
@@ -37,7 +38,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Positioned(
-            top: -80,
+            top: -90,
             child: Container(
               width: 200,
               height: 200,
@@ -53,25 +54,46 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          Positioned(
-            bottom: 430,
-            left: 75,
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Stack(
-                    children: [
-                      Image.asset(
-                        'lib/assets/undraw_done_checking_re_6vyx 1.png',
-                        height: 194,
-                        width: 254,
-                      ),
-                    ],
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Stack(
+                  children: [
+                    Image.asset(
+                      'lib/assets/undraw_done_checking_re_6vyx 1.png',
+                      height: 194,
+                      width: 254,
+                    ),
+                  ],
+                ),
+                SizedBox(height: 50),
+                Text('Gets things with TODs',
+                    style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold))),
+                SizedBox(height: 15),
+                SizedBox(
+                  width: 200,
+                  child: Text(
+                    'Lorem ipsum dolor sit amet consectetur. Eget sit nec et euismod. Consequat urna quam felis interdum quisque. Malesuada adipiscing tristique ut eget sed.',
+                    style: GoogleFonts.poppins(
+                      textStyle: TextStyle(
+                          fontSize: 13, fontWeight: FontWeight.normal),
+                    ),
                   ),
-                  SizedBox(height: 30),
-                  Text('Gets things with TODs'),
-                ],
+                ),
+                SizedBox(height: 50),
+              ],
+            ),
+          ),
+          Positioned(
+            bottom: 10,
+            child: ElevatedButton(
+              onPressed: () {},
+              child: Text(
+                'Get Started',
+                style: GoogleFonts.poppins(),
               ),
             ),
           ),
