@@ -53,65 +53,70 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Stack(
-                  children: [
-                    Image.asset(
-                      'lib/assets/undraw_done_checking_re_6vyx 1.png',
-                      height: 194,
-                      width: 254,
-                    ),
-                  ],
-                ),
-                SizedBox(height: 50),
-                Text(
-                  'Gets things with TODs',
-                  style: GoogleFonts.poppins(
-                    textStyle: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
+          Container(
+            margin: EdgeInsets.only(top: 180),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Stack(
+                    children: [
+                      Image.asset(
+                        'lib/assets/undraw_done_checking_re_6vyx 1.png',
+                        height: 194,
+                        width: 254,
+                      ),
+                    ],
                   ),
-                ),
-                SizedBox(height: 15),
-                SizedBox(
-                  width: 200,
-                  child: Text(
-                    'Lorem ipsum dolor sit amet consectetur. Eget sit nec et euismod. Consequat urna quam felis interdum quisque. Malesuada adipiscing tristique ut eget sed.',
+                  SizedBox(height: 50),
+                  Text(
+                    'Gets things with TODs',
                     style: GoogleFonts.poppins(
                       textStyle: TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.normal,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                ),
-                SizedBox(height: 150),
-                SizedBox(
-                  width: 380,
-                  height: 60, // Adjust the height as needed
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF50C2C9),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                    ),
+                  SizedBox(height: 15),
+                  SizedBox(
+                    width: 200,
                     child: Text(
-                      'Get Started',
+                      'Lorem ipsum dolor sit amet consectetur. Eget sit nec et euismod. Consequat urna quam felis interdum quisque. Malesuada adipiscing tristique ut eget sed.',
                       style: GoogleFonts.poppins(
-                          textStyle: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500)),
+                        textStyle: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ],
+                  SizedBox(height: 120),
+                  SizedBox(
+                    width: 380,
+                    height: 60, // Adjust the height as needed
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xFF50C2C9),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                      ),
+                      child: Text(
+                        'Get Started',
+                        style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
