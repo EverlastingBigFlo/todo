@@ -18,49 +18,49 @@ class _RegistrationState extends State<Registration> {
 
     return Scaffold(
       backgroundColor: const Color(0xFFF0F4F3),
-      body: SingleChildScrollView(
-        child: Stack(
-          //background colors starts here
-          children: <Widget>[
-            Positioned(
-              left: -100,
-              child: Container(
-                width: 200,
-                height: 200,
-                decoration: BoxDecoration(
-                  color: myColor.withOpacity(0.7),
-                  borderRadius: BorderRadius.circular(100.0),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
-                      spreadRadius: 5,
-                      blurRadius: 20,
-                    ),
-                  ],
-                ),
+      body: Stack(
+        //background colors starts here
+        children: <Widget>[
+          Positioned(
+            left: -100,
+            child: Container(
+              width: 200,
+              height: 200,
+              decoration: BoxDecoration(
+                color: myColor.withOpacity(0.7),
+                borderRadius: BorderRadius.circular(100.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.1),
+                    spreadRadius: 5,
+                    blurRadius: 20,
+                  ),
+                ],
               ),
             ),
-            Positioned(
-              top: -90,
-              child: Container(
-                width: 200,
-                height: 200,
-                decoration: BoxDecoration(
-                  color: myColor.withOpacity(0.7),
-                  borderRadius: BorderRadius.circular(100.0),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
-                      blurRadius: 20,
-                    ),
-                  ],
-                ),
+          ),
+          Positioned(
+            top: -90,
+            child: Container(
+              width: 200,
+              height: 200,
+              decoration: BoxDecoration(
+                color: myColor.withOpacity(0.7),
+                borderRadius: BorderRadius.circular(100.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.1),
+                    blurRadius: 20,
+                  ),
+                ],
               ),
             ),
-            //background color ends here
+          ),
+          //background color ends here
 
-            // registration introduction starts here
-            Container(
+          // registration introduction starts here
+          SingleChildScrollView(
+            child: Container(
               margin: EdgeInsets.only(top: 260),
               child: Center(
                 child: Column(
@@ -208,12 +208,14 @@ class _RegistrationState extends State<Registration> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         MyText(
-                            text: 'Already have an account ?',
+                            text: 'Already have an account ? ',
                             fontSize: 16,
                             fontWeight: FontWeight.normal,
                             color: Colors.black),
                         InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.pushNamed(context, 'SignIn');
+                          },
                           child: MyText(
                               text: 'Sign In',
                               fontSize: 16,
@@ -226,8 +228,8 @@ class _RegistrationState extends State<Registration> {
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
