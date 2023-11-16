@@ -1,5 +1,4 @@
 // ignore_for_file: prefer_const_constructors
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:todo/components/my_text.dart';
 
@@ -11,6 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  
   @override
   Widget build(BuildContext context) {
     Color myColor = Color(0xFF8FE1D7);
