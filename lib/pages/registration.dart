@@ -61,7 +61,7 @@ class _RegistrationState extends State<Registration> {
 
             // registration introduction starts here
             Container(
-              margin: EdgeInsets.only(top: 300),
+              margin: EdgeInsets.only(top: 250),
               child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -82,7 +82,7 @@ class _RegistrationState extends State<Registration> {
                     ),
 
                     //full name textfield starts here
-                    SizedBox(height: 90),
+                    SizedBox(height: 60),
 
                     Container(
                       height: 80, // Adjust the height as needed
@@ -105,9 +105,79 @@ class _RegistrationState extends State<Registration> {
                       ),
                     ),
 
-                    // textfield end here
+                    // full name textfield end here
 
-                    SizedBox(height: 120),
+                    // email textfield starts here
+                    Container(
+                      height: 80, // Adjust the height as needed
+                      padding: const EdgeInsets.fromLTRB(30, 0, 30, 30),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        ),
+                        child: TextField(
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: InputDecoration(
+                            hintText: 'Enter your Email',
+                            hintStyle:
+                                TextStyle(color: Colors.black54, fontSize: 13),
+                            contentPadding: EdgeInsets.fromLTRB(25, 10, 25, 10),
+                            border: InputBorder.none,
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    // email textfield end here
+
+                    // password textfield starts here
+                    Container(
+                      height: 80, // Adjust the height as needed
+                      padding: const EdgeInsets.fromLTRB(30, 0, 30, 30),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        ),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Enter Password',
+                            hintStyle:
+                                TextStyle(color: Colors.black54, fontSize: 13),
+                            contentPadding: EdgeInsets.fromLTRB(25, 10, 25, 10),
+                            border: InputBorder.none,
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    // password textfield end here
+
+                    // confirm password textfield starts here
+                    Container(
+                      height: 80, // Adjust the height as needed
+                      padding: const EdgeInsets.fromLTRB(30, 0, 30, 30),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        ),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Enter Password',
+                            hintStyle:
+                                TextStyle(color: Colors.black54, fontSize: 13),
+                            contentPadding: EdgeInsets.fromLTRB(25, 10, 25, 10),
+                            border: InputBorder.none,
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    // confirm password textfield end here
+
+                    SizedBox(height: 50),
 
                     // register button implementation
                     SizedBox(
