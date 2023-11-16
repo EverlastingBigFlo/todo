@@ -18,50 +18,50 @@ class _RegistrationState extends State<Registration> {
 
     return Scaffold(
       backgroundColor: const Color(0xFFF0F4F3),
-      body: Stack(
-        //background colors starts here
-        children: <Widget>[
-          Positioned(
-            left: -100,
-            child: Container(
-              width: 200,
-              height: 200,
-              decoration: BoxDecoration(
-                color: myColor.withOpacity(0.7),
-                borderRadius: BorderRadius.circular(100.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
-                    spreadRadius: 5,
-                    blurRadius: 20,
-                  ),
-                ],
+      body: SingleChildScrollView(
+        child: Stack(
+          //background colors starts here
+          children: <Widget>[
+            Positioned(
+              left: -100,
+              child: Container(
+                width: 200,
+                height: 200,
+                decoration: BoxDecoration(
+                  color: myColor.withOpacity(0.7),
+                  borderRadius: BorderRadius.circular(100.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      spreadRadius: 5,
+                      blurRadius: 20,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          Positioned(
-            top: -90,
-            child: Container(
-              width: 200,
-              height: 200,
-              decoration: BoxDecoration(
-                color: myColor.withOpacity(0.7),
-                borderRadius: BorderRadius.circular(100.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
-                    blurRadius: 20,
-                  ),
-                ],
+            Positioned(
+              top: -90,
+              child: Container(
+                width: 200,
+                height: 200,
+                decoration: BoxDecoration(
+                  color: myColor.withOpacity(0.7),
+                  borderRadius: BorderRadius.circular(100.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      blurRadius: 20,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          //background color ends here
+            //background color ends here
 
-          // registration introduction starts here
-          Expanded(
-            child: Container(
-              margin: EdgeInsets.only(top: 180),
+            // registration introduction starts here
+            Container(
+              margin: EdgeInsets.only(top: 300),
               child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -81,7 +81,7 @@ class _RegistrationState extends State<Registration> {
                       ),
                     ),
 
-                    //registration inputs starts here
+                    //full name textfield starts here
                     SizedBox(height: 90),
 
                     Container(
@@ -133,8 +133,8 @@ class _RegistrationState extends State<Registration> {
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
