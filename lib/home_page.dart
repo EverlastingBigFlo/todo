@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -68,10 +67,15 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 SizedBox(height: 50),
-                Text('Gets things with TODs',
-                    style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold))),
+                Text(
+                  'Gets things with TODs',
+                  style: GoogleFonts.poppins(
+                    textStyle: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
                 SizedBox(height: 15),
                 SizedBox(
                   width: 200,
@@ -79,22 +83,25 @@ class _HomePageState extends State<HomePage> {
                     'Lorem ipsum dolor sit amet consectetur. Eget sit nec et euismod. Consequat urna quam felis interdum quisque. Malesuada adipiscing tristique ut eget sed.',
                     style: GoogleFonts.poppins(
                       textStyle: TextStyle(
-                          fontSize: 13, fontWeight: FontWeight.normal),
+                        fontSize: 13,
+                        fontWeight: FontWeight.normal,
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(height: 50),
+                SizedBox(
+                  width: 380,
+                  height: 60, // Adjust the width as needed
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Get Started',
+                      style: GoogleFonts.poppins(),
+                    ),
+                  ),
+                ),
               ],
-            ),
-          ),
-          Positioned(
-            bottom: 10,
-            child: ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                'Get Started',
-                style: GoogleFonts.poppins(),
-              ),
             ),
           ),
         ],
