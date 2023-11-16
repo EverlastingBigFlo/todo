@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  
+
   @override
   Widget build(BuildContext context) {
     Color myColor = Color(0xFF8FE1D7);

@@ -19,6 +19,7 @@ class _RegistrationState extends State<Registration> {
     return Scaffold(
       backgroundColor: const Color(0xFFF0F4F3),
       body: Stack(
+        //background colors starts here
         children: <Widget>[
           Positioned(
             left: -100,
@@ -55,46 +56,81 @@ class _RegistrationState extends State<Registration> {
               ),
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(top: 180),
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  MyText(
-                      text: 'Welcome to Onboard! ',
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                  SizedBox(
-                    width: 200,
-                    child: Text(
-                      'Let’s help to meet up your tasks.',
-                      style: TextStyle(fontSize: 13, height: 2),
-                      textAlign: TextAlign
-                          .center, // Adjust as needed (left, center, right, etc.)
+          //background color ends here
+
+          // registration introduction starts here
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.only(top: 180),
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MyText(
+                        text: 'Welcome to Onboard! ',
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    SizedBox(height: 25),
+                    SizedBox(
+                      width: 200,
+                      child: Text(
+                        'Let’s help to meet up your tasks.',
+                        style: TextStyle(fontSize: 13, height: 2),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 120),
-                  SizedBox(
-                    width: 380,
-                    height: 60, // Adjust the height as needed
-                    child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF50C2C9),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0),
+
+                    //registration inputs starts here
+                    SizedBox(height: 90),
+
+                    Container(
+                      height: 80, // Adjust the height as needed
+                      padding: const EdgeInsets.fromLTRB(30, 0, 30, 30),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        ),
+                        child: TextField(
+                          keyboardType: TextInputType.text,
+                          decoration: InputDecoration(
+                            hintText: 'Enter your full name',
+                            hintStyle:
+                                TextStyle(color: Colors.black54, fontSize: 13),
+                            contentPadding: EdgeInsets.fromLTRB(25, 10, 25, 10),
+                            border: InputBorder.none,
                           ),
                         ),
-                        child: MyText(
-                          text: 'Get Started',
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white,
-                          fontSize: 18,
-                        )),
-                  ),
-                ],
+                      ),
+                    ),
+
+                    // textfield end here
+
+                    SizedBox(height: 120),
+
+                    // register button implementation
+                    SizedBox(
+                      width: 380,
+                      height: 60, // Adjust the height as needed
+                      child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color(0xFF50C2C9),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                          ),
+                          child: MyText(
+                            text: 'Register',
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                            fontSize: 18,
+                          )),
+                    ),
+                    // registration introduction ends here
+                  ],
+                ),
               ),
             ),
           ),
