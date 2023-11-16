@@ -61,7 +61,7 @@ class _RegistrationState extends State<Registration> {
 
             // registration introduction starts here
             Container(
-              margin: EdgeInsets.only(top: 250),
+              margin: EdgeInsets.only(top: 260),
               child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -165,7 +165,7 @@ class _RegistrationState extends State<Registration> {
                         ),
                         child: TextField(
                           decoration: InputDecoration(
-                            hintText: 'Enter Password',
+                            hintText: 'Confirm Password',
                             hintStyle:
                                 TextStyle(color: Colors.black54, fontSize: 13),
                             contentPadding: EdgeInsets.fromLTRB(25, 10, 25, 10),
@@ -177,7 +177,7 @@ class _RegistrationState extends State<Registration> {
 
                     // confirm password textfield end here
 
-                    SizedBox(height: 50),
+                    SizedBox(height: 35),
 
                     // register button implementation
                     SizedBox(
@@ -199,6 +199,29 @@ class _RegistrationState extends State<Registration> {
                           )),
                     ),
                     // registration introduction ends here
+
+                    //already have account code here
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        MyText(
+                            text: 'Already have an account ?',
+                            fontSize: 16,
+                            fontWeight: FontWeight.normal,
+                            color: Colors.black),
+                        InkWell(
+                          onTap: () {},
+                          child: MyText(
+                              text: 'Sign In',
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: Color(0xFF50C2C9)),
+                        )
+                      ],
+                    )
                   ],
                 ),
               ),
