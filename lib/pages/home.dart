@@ -19,7 +19,6 @@ class _HomePageState extends State<HomePage> {
       body: Stack(
         children: <Widget>[
           Positioned(
-            // left: -100,
             child: Container(
               width: 430,
               height: 292,
@@ -67,6 +66,29 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.black.withOpacity(0.1),
                     blurRadius: 20,
                   ),
+                ],
+              ),
+            ),
+          ),
+
+          // adding image to my background
+
+          Positioned(
+            bottom: 25,
+            left: 140,
+            child: Center(
+              child: Column(
+                // mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('lib/assets/Ellipse 3.png'),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  MyText(
+                      text: 'Welcome User',
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white)
                 ],
               ),
             ),
