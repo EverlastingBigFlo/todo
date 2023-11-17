@@ -89,10 +89,9 @@ class _HomePageState extends State<HomePage> {
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
-                  Container(),
-                  Container(),
-                  Container(),
-                  Container(),
+                Card(
+                  child: Row(),
+                )
                 ],
               ),
             ),
