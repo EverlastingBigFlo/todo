@@ -88,7 +88,11 @@ class _HomePageState extends State<HomePage> {
                       text: 'Welcome User',
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white)
+                      color: Colors.white),
+                  Container(),
+                  Container(),
+                  Container(),
+                  Container(),
                 ],
               ),
             ),
