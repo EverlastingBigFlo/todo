@@ -15,6 +15,18 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Color myColor = Color(0xFF8FE1D7);
 
+    String getGreeting() {
+      var hour = DateTime.now().hour;
+
+      if (hour < 12) {
+        return 'Good Morning';
+      } else if (hour < 17) {
+        return 'Good Afternoon';
+      } else {
+        return 'Good Evening';
+      }
+    }
+
     return Scaffold(
       backgroundColor: const Color(0xFFF0F4F3),
       body: Stack(
@@ -75,25 +87,21 @@ class _HomePageState extends State<HomePage> {
           // adding image to my background
 
           Positioned(
-            bottom: 25,
+            bottom: 5,
             left: 140,
             child: Center(
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Clock(),
-                  // Image.asset('lib/assets/Ellipse 3.png'),
                   SizedBox(
                     height: 20,
                   ),
                   Row(
                     children: [
-                      //checkbox
-                      // Checkbox(value: value, onChanged: onChanged)
-
                       //user welcome
                       MyText(
-                          text: 'Welcome User',
+                          text: getGreeting(),
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
