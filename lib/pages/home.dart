@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
+import 'package:todo/components/clock.dart';
 import 'package:todo/components/my_text.dart';
 
 class HomePage extends StatefulWidget {
@@ -80,13 +81,13 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset('lib/assets/Ellipse 3.png'),
+                  Clock(),
+                  // Image.asset('lib/assets/Ellipse 3.png'),
                   SizedBox(
                     height: 20,
                   ),
                   Row(
                     children: [
-
                       //checkbox
                       // Checkbox(value: value, onChanged: onChanged)
 
@@ -98,9 +99,9 @@ class _HomePageState extends State<HomePage> {
                           color: Colors.white),
                     ],
                   ),
-                Card(
-                  child: Row(),
-                )
+                  Card(
+                    child: Row(),
+                  )
                 ],
               ),
             ),

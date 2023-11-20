@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:todo/components/clock.dart';
 import 'package:todo/pages/home.dart';
 import 'package:todo/pages/registration.dart';
 import 'package:todo/pages/sign_in.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePage(),
+        // '/': (context) => const Clock(),
         'welcome': (context) => const WelcomePage(),
         'register': (context) => const Registration(),
         'SignIn': (context) => const SignIn(),
