@@ -84,11 +84,20 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     height: 20,
                   ),
-                  MyText(
-                      text: 'Welcome User',
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                  Row(
+                    children: [
+
+                      //checkbox
+                      // Checkbox(value: value, onChanged: onChanged)
+
+                      //user welcome
+                      MyText(
+                          text: 'Welcome User',
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ],
+                  ),
                 Card(
                   child: Row(),
                 )
