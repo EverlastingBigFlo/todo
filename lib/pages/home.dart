@@ -115,6 +115,8 @@ class _HomePageState extends State<HomePage> {
                           //     onTap: () {},
                           //   ),
                           // ),
+
+                          // greetings
                           MyText(
                               text: getGreeting(),
                               fontSize: 18,
@@ -130,11 +132,16 @@ class _HomePageState extends State<HomePage> {
           ),
           Column(
             children: [
-              MyText(
-                  text: 'text',
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black)
+              //Header title
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: MyText(
+                    text: 'Task List',
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              ),
+              
             ],
           )
         ],
