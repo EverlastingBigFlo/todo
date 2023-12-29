@@ -3,6 +3,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:todo/components/clock.dart';
 import 'package:todo/components/my_text.dart';
+import 'package:todo/components/todo_tile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,6 +13,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // access what user type in
+  final textController = TextEditingController();
+
+  // create task
+
   @override
   Widget build(BuildContext context) {
     Color myColor = Color(0xFF8FE1D7);
@@ -104,16 +110,16 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           //user welcome
                           // DefaultTextStyle(
-                          //   style: const TextStyle(
-                          //     fontSize: 20.0,
-                          //   ),
-                          //   child: AnimatedTextKit(
-                          //     animatedTexts: [
-                          //       WavyAnimatedText('Hello ${getGreeting()}'),
-                          //     ],
-                          //     isRepeatingAnimation: true,
-                          //     onTap: () {},
-                          //   ),
+                          // style: const TextStyle(
+                          // fontSize: 20.0,
+                          // ),
+                          // child: AnimatedTextKit(
+                          // animatedTexts: [
+                          // WavyAnimatedText('Hello ${getGreeting()}'),
+                          // ],
+                          // isRepeatingAnimation: true,
+                          // onTap: () {},
+                          // ),
                           // ),
 
                           // greetings
@@ -162,6 +168,7 @@ class _HomePageState extends State<HomePage> {
                       Container(
                         padding: EdgeInsets.all(10.0),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
                               'Daily Task',
@@ -171,18 +178,19 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                             // Add your icon here if needed
-                            FloatingActionButton(
-                              backgroundColor: myColor,
+                            TextButton(
                               onPressed: () {},
                               child: Icon(
                                 Icons.add,
-                                color: Colors.white,
+                                color: myColor,
                                 size: 50,
                               ),
                             )
                           ],
                         ),
                       ),
+
+                      ToDoTile()
                     ],
                   ),
                 ),
