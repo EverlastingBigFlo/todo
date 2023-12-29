@@ -13,10 +13,18 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // access what user type in
-  final textController = TextEditingController();
+  // list of todo
+  List toDoList = [
+    ['Make Tutorial', false],
+    ['Do Excercise', false]
+  ];
 
-  // create task
+// if the checkbox is tapped
+  void checkBoxChanged(bool? value, int index) {
+    setState(() {
+      toDoList[index][1] = !toDoList[index][1];
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -108,21 +116,6 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Row(
                         children: [
-                          //user welcome
-                          // DefaultTextStyle(
-                          // style: const TextStyle(
-                          // fontSize: 20.0,
-                          // ),
-                          // child: AnimatedTextKit(
-                          // animatedTexts: [
-                          // WavyAnimatedText('Hello ${getGreeting()}'),
-                          // ],
-                          // isRepeatingAnimation: true,
-                          // onTap: () {},
-                          // ),
-                          // ),
-
-                          // greetings
                           MyText(
                               text: getGreeting(),
                               fontSize: 18,
@@ -148,67 +141,74 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.black),
               ),
 
+// ...
+
               Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10.0),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.1),
-                        spreadRadius: 2,
-                        blurRadius: 5,
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                    children: [
-                      // daily task and add new icon
-                      Container(
-                        padding: EdgeInsets.all(10.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Daily Task',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                            // Add your icon here if needed
-                            TextButton(
-                              onPressed: () {},
-                              child: Icon(
-                                Icons.add,
-                                color: myColor,
-                                size: 50,
-                              ),
-                            )
-                          ],
+                child: Center(
+                  child: Container(
+                    width: double
+                        .infinity, // Set the width to take up available width
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10.0),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          spreadRadius: 2,
+                          blurRadius: 5,
                         ),
-                      ),
+                      ],
+                    ),
+                    child: Column(
+                      children: [
+                        // daily task and add new icon
+                        Container(
+                          padding: EdgeInsets.all(10.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Daily Task',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              // Add your icon here if needed
+                              TextButton(
+                                onPressed: () {},
+                                child: Icon(
+                                  Icons.add,
+                                  color: myColor,
+                                  size: 50,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
 
-                      ToDoTile(
-                        taskName: 'Make Tutorial',
-                        taskCompleted: true,
-                        onChanged: (po) {},
-                      ),
-                      ToDoTile(
-                        taskName: 'Make Tutorial',
-                        taskCompleted: true,
-                        onChanged: (po) {},
-                      ),
-                      ToDoTile(
-                        taskName: 'Make Tutorial',
-                        taskCompleted: true,
-                        onChanged: (po) {},
-                      ),
-                    ],
+                        SizedBox(
+                          height: 200, // Set a desired height for the ListView
+                          child: ListView.builder(
+                            itemCount: toDoList.length,
+                            itemBuilder: (context, index) {
+                              return ToDoTile(
+                                taskName: toDoList[index][0],
+                                taskCompleted: toDoList[index][1],
+                                onChanged: (value) =>
+                                    checkBoxChanged(value, index),
+                              );
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              )
+              ),
+
+// ...
             ],
           )
         ],
