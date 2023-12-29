@@ -26,6 +26,16 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+//create new task
+  void createNewTask() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog();
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     Color myColor = Color(0xFF8FE1D7);
@@ -141,8 +151,6 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.black),
               ),
 
-// ...
-
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Center(
@@ -175,9 +183,9 @@ class _HomePageState extends State<HomePage> {
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              // Add your icon here if needed
+                              // Add your new task icon here if needed
                               TextButton(
-                                onPressed: () {},
+                                onPressed: createNewTask,
                                 child: Icon(
                                   Icons.add,
                                   color: myColor,
