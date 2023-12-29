@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables, must_be_immutable
 
 import 'package:flutter/material.dart';
 
@@ -26,11 +26,15 @@ class ToDoTile extends StatelessWidget {
           Checkbox(
             value: taskCompleted,
             onChanged: onChanged,
-            visualDensity:
-                VisualDensity(vertical: -4), 
+            visualDensity: VisualDensity(vertical: -4),
+            activeColor: Color(0xFF8FE1D7),
           ),
           // task name
-          Text(taskName),
+          Text(taskName,
+              style: TextStyle(
+                  decoration: taskCompleted
+                      ? TextDecoration.lineThrough
+                      : TextDecoration.none)),
         ],
       ),
     );
