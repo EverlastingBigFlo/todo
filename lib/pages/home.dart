@@ -171,6 +171,15 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                             // Add your icon here if needed
+                            FloatingActionButton(
+                              backgroundColor: myColor,
+                              onPressed: () {},
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                                size: 50,
+                              ),
+                            )
                           ],
                         ),
                       ),
