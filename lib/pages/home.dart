@@ -2,6 +2,7 @@
 // import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:todo/components/clock.dart';
+import 'package:todo/components/dialog_box.dart';
 import 'package:todo/components/my_text.dart';
 import 'package:todo/components/todo_tile.dart';
 
@@ -31,7 +32,7 @@ class _HomePageState extends State<HomePage> {
     showDialog(
       context: context,
       builder: (context) {
-        return AlertDialog();
+        return DialogBox();
       },
     );
   }

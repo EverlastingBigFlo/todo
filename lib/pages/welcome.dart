@@ -14,6 +14,7 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     Color myColor = Color(0xFF8FE1D7);
+    
 
     return Scaffold(
       backgroundColor: const Color(0xFFF0F4F3),
