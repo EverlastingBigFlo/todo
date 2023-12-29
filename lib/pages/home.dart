@@ -190,7 +190,21 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
 
-                      ToDoTile()
+                      ToDoTile(
+                        taskName: 'Make Tutorial',
+                        taskCompleted: true,
+                        onChanged: (po) {},
+                      ),
+                      ToDoTile(
+                        taskName: 'Make Tutorial',
+                        taskCompleted: true,
+                        onChanged: (po) {},
+                      ),
+                      ToDoTile(
+                        taskName: 'Make Tutorial',
+                        taskCompleted: true,
+                        onChanged: (po) {},
+                      ),
                     ],
                   ),
                 ),

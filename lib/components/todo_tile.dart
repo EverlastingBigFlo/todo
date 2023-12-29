@@ -1,19 +1,36 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
 class ToDoTile extends StatelessWidget {
-  const ToDoTile({Key? key});
+  final String taskName;
+  final bool taskCompleted;
+  Function(bool?)? onChanged;
+
+  ToDoTile({
+    Key? key,
+    required this.taskName,
+    required this.taskCompleted,
+    required this.onChanged,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      alignment:
-          Alignment.topLeft, // Align the entire container to the top-left
-      child: Column(
+      padding: EdgeInsets.all(15.0),
+      alignment: Alignment.topLeft,
+      child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Make Tutorial'),
+          // checkbox with verticalAlignment
+          Checkbox(
+            value: taskCompleted,
+            onChanged: onChanged,
+            visualDensity:
+                VisualDensity(vertical: -4), 
+          ),
+          // task name
+          Text(taskName),
         ],
       ),
     );
