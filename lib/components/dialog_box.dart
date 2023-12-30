@@ -10,8 +10,10 @@ class DialogBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       content: Container(
-        height: 120,
+        height: 200,
+        width: 350,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             // get user input
             TextField(
@@ -26,6 +28,7 @@ class DialogBox extends StatelessWidget {
 
             //cancel button and save button below
             Row(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 // save button
                 MyButton(text: 'Save', onPressed: () {}),
