@@ -30,6 +30,14 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+// Function to save new task
+  void saveNewTask() {
+    setState(() {
+      toDoList.add([_controller.text, false]);
+    });
+    // Navigator.of(context).pop();
+  }
+
 //create new task
   void createNewTask() {
     showDialog(
@@ -37,6 +45,8 @@ class _HomePageState extends State<HomePage> {
       builder: (context) {
         return DialogBox(
           controller: _controller,
+          onSave: saveNewTask,
+          onCancel: () => Navigator.of(context).pop(),
         );
       },
     );
@@ -45,6 +55,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     Color myColor = Color(0xFF8FE1D7);
+
+//to greet as set byt time
 
     String getGreeting() {
       var hour = DateTime.now().hour;
@@ -161,8 +173,7 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.all(20.0),
                 child: Center(
                   child: Container(
-                    width: double
-                        .infinity, // Set the width to take up available width
+                    width: double.infinity,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10.0),
@@ -203,7 +214,7 @@ class _HomePageState extends State<HomePage> {
                         ),
 
                         SizedBox(
-                          height: 200, // Set a desired height for the ListView
+                          height: 200,
                           child: ListView.builder(
                             itemCount: toDoList.length,
                             itemBuilder: (context, index) {
