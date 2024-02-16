@@ -30,14 +30,6 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-// Function to save new task
-  void saveNewTask() {
-    setState(() {
-      toDoList.add([_controller.text, false]);
-    });
-    // Navigator.of(context).pop();
-  }
-
 //create new task
   void createNewTask() {
     showDialog(
@@ -50,6 +42,14 @@ class _HomePageState extends State<HomePage> {
         );
       },
     );
+  }
+
+// Function to save new task
+  void saveNewTask() {
+    setState(() {
+      toDoList.add([_controller.text, false]);
+    });
+    // Navigator.of(context).pop();
   }
 
   @override
