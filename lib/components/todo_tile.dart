@@ -17,7 +17,7 @@ class ToDoTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(15.0),
+      padding: EdgeInsets.all(20.0),
       alignment: Alignment.topLeft,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
