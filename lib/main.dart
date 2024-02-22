@@ -20,9 +20,8 @@ class MyApp extends StatelessWidget {
       title: 'ToDo App',
       initialRoute: '/',
       routes: {
-        '/': (context) => const HomePage(),
-        // '/': (context) => const Clock(),
-        'welcome': (context) => const WelcomePage(),
+        // '/': (context) => const HomePage(),
+        '/': (context) => const WelcomePage(),
         'register': (context) => const Registration(),
         'SignIn': (context) => const SignIn(),
       },
