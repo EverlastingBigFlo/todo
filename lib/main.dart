@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo/animate.dart';
 // import 'package:todo/components/clock.dart';
 import 'package:todo/pages/home.dart';
 import 'package:todo/pages/registration.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         // '/': (context) => const HomePage(),
-        '/': (context) => const WelcomePage(),
+        // '/': (context) => const WelcomePage(),
+        '/': (context) => MyAnimatedWidget(),
         'register': (context) => const Registration(),
         'SignIn': (context) => const SignIn(),
       },
