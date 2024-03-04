@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       toDoList.add([_controller.text, false]);
     });
-    // Navigator.of(context).pop();
+    Navigator.of(context).pop();
   }
 
   @override
