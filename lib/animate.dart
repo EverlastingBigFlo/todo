@@ -15,7 +15,7 @@ class _MyAnimatedWidgetState extends State<MyAnimatedWidget>
   void initState() {
     super.initState();
     _controller =
-        AnimationController(duration: Duration(seconds: 2), vsync: this);
+        AnimationController(duration: const Duration(seconds: 2), vsync: this);
     _animation = Tween<double>(begin: 0, end: 2).animate(_controller);
   }
 

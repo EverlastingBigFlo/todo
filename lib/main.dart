@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:todo/animate.dart';
 // import 'package:todo/components/clock.dart';
 import 'package:todo/pages/home.dart';
 import 'package:todo/pages/registration.dart';
 import 'package:todo/pages/sign_in.dart';
 
-import 'pages/welcome.dart';
 
 void main() {
   runApp(const MyApp());
