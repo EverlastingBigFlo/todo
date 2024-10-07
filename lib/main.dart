@@ -4,7 +4,6 @@ import 'package:todo/pages/home.dart';
 import 'package:todo/pages/registration.dart';
 import 'package:todo/pages/sign_in.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
