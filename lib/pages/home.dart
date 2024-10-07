@@ -190,7 +190,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           // daily task and add new icon
                           Container(
-                            padding: EdgeInsets.all(10.0),
+                            padding: EdgeInsets.all(18.0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
